@@ -193,8 +193,25 @@
 
         <div class="col-sm-7 text-left">
             <h2 align="center"> Question <span id="questionNumber">1</span>: What education has Jane already gained?</h2>
-            <p><img src="images/chat.png" alt="girl"></p>
-			
+            <!--<p><img src="images/chat.png" alt="girl"></p>-->
+            <p>This is where the conversation will appear</p>
+            <div class="row" id="chat">
+                <div class="col-md-8 text-right">
+                    <h3>Question?</h3>
+                </div>
+                <div class="col-md-8 col-md-push-4" id="textInput">
+                    <label for="ans"><input type="text" class="form-control" id="ans"></label>
+                </div>
+
+                <div class="col-md-8 col-md-push-4 hidden" id="smallOptionGroup1">
+                    <div class="btn-group-vertical">
+                        <button type="button" class="btn btn-primary" id="smallOpt1">Small Question 1</button>
+                        <button type="button" class="btn btn-primary" id="smallOpt2">Small Question 2</button>
+                        <button type="button" class="btn btn-primary" id="smallOpt3">Small Question 3</button>
+                    </div>
+                </div>
+            </div>
+            <!--main answers -->
             <div class="buttons">
 			
                 <button type="button" class="btn btn-primary" id="ansOpt1">Apple</button>

@@ -11,7 +11,14 @@ $("#usr").on('keyup', function (e) {
 
 $("#ans").on('keyup', function (e) {
   if (e.keyCode === 13) {
-    $("#ques").append("<h1>Another Question?</h1>").append("<label for='ans'><input type='text' class='form-control' id='ans'></label>");
+    var input = $('#ans').val();
+    console.log(input);
+    $("#ans").prop('disabled', true);
+    // add new question or answer
+    $('<div class="col-md-8 text-right"><h3>' + input + '</h3></div>').insertAfter('#textInput');
+
+    // show hidden questions
+    $('#smallOptionGroup1').removeClass('hidden');
   }
 });
 
@@ -83,8 +90,46 @@ function updateQuestion() {
   // get current question
   var questionElement = $('#questionNumber');
   var currentQuestion = parseInt(questionElement.text());
-  questionElement.text((currentQuestion + 1));
+  questionElement.text(currentQuestion + 1);
 }
 
 
+var smallOpt11 = false;
+$('#smallOpt1').click(function () {
+  if (!smallOpt11) {
+    $('#chat').append('<div class="col-md-8 text-right"><h3>An answer to small question</h3></div>');
+    $(this).prop('disabled', true);
+    $(this).removeClass('btn-primary');
+    $(this).addClass('btn-info');
+    $("#smallOpt2").prop('disabled', true);
+    $("#smallOpt3").prop('disabled', true);
+  }
+  smallOpt11 = true;
+});
 
+
+var smallOpt12 = false;
+$('#smallOpt2').click(function () {
+  if (!smallOpt12) {
+    $('#chat').append('<div class="col-md-8 text-right"><h3>An answer to small question</h3></div>');
+    $(this).prop('disabled', true);
+    $(this).removeClass('btn-primary');
+    $(this).addClass('btn-info');
+    $("#smallOpt1").prop('disabled', true);
+    $("#smallOpt3").prop('disabled', true);
+  }
+  smallOpt12 = true;
+});
+
+var smallOpt13 = false;
+$('#smallOpt3').click(function () {
+  if (!smallOpt13) {
+    $('#chat').append('<div class="col-md-8 text-right"><h3>An answer to small question</h3></div>');
+    $(this).prop('disabled', true);
+    $(this).removeClass('btn-primary');
+    $(this).addClass('btn-info');
+    $("#smallOpt1").prop('disabled', true);
+    $("#smallOpt2").prop('disabled', true);
+  }
+  smallOpt13 = true;
+});
