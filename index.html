@@ -12,6 +12,7 @@
             margin-bottom: 0;
             border-radius: 0;
         }
+		
 
         .progress-bar-vertical {
             width: 50px;
@@ -44,7 +45,6 @@
         /* Set gray background color and 100% height */
         .sidenav {
             padding-top: 20px;
-            background-color: #f1f1f1;
             height: 100%;
         }
 
@@ -52,8 +52,41 @@
             width: 33%;
             margin-left: 30%;
             margin-top: 10%;
+			margin-bottom: 5px;
             border: solid #ccc 1px;
         }
+
+		
+		.anna {
+			background-color: #80cbc5;
+		}
+		
+		.jane {
+			background-color:  rgb(170,220,216);
+		}
+		
+				
+		.chrisie {
+			background-color:  #c9e9e6;
+		}
+		
+		.buttons{
+			width: 70%;
+			margin:0 auto;
+		}
+		
+		button{
+			width: 28%;
+			height: 60px;
+			margin: 10px;
+		}
+		
+		.names {
+			writing-mode: vertical-rl;
+			text-orientation: upright;
+		}
+		
+
 
         /* On small screens, set height to 'auto' for sidenav and grid */
         @media screen and (max-width: 767px) {
@@ -71,7 +104,6 @@
 <body>
 
 <nav class="navbar navbar-inverse">
-    <<<<<<< HEAD
     <div class="container-fluid">
         <img src="images/em2030.png" alt="logo" style="width:20%; margin-left:none;">
     </div>
@@ -80,37 +112,63 @@
 <div class="container-fluid text-center">
     <div class="row content">
         <div class="visible-lg visible-md col-md-2 sidenav">
-            <table class="table progress-tab">
-                <tbody>
-                <tr class="anna">
-                    <td class="Q9">Q3</td>
-                </tr>
-                <tr class="anna">
-                    <td class="Q8">Q2</td>
-                </tr>
-                <tr class="anna">
-                    <td class="Q7">Q1</td>
-                </tr>
-                <tr class="anna">
-                    <td class="Q6">Q3</td>
-                </tr>
-                <tr class="">
-                    <td class="Q5">Q2</td>
-                </tr>
-                <tr class="">
-                    <td class="Q4">Q1</td>
-                </tr>
-                <tr class="">
-                    <td class="Q3">Q3</td>
-                </tr>
-                <tr class="">
-                    <td class="Q2">Q2</td>
-                </tr>
-                <tr class="">
-                    <td class="Q1">Q1</td>
-                </tr>
+			<div class="well text-left">
+				<p style="font-size:16px;"><b>Score:</b><span id="score"> 9000</span></p>
+			</div>
+			
+			<div class="row">
+			
+				<div class="col-md-2">
+				
+					<label class="names">Anna</label>
+				
+				</div>
+			
+				<div class="col-md-10">
+			
+					<table class="table progress-tab anna">
+						<tbody>
+							<tr>
+								<td class="Q9">Q3</td>
+							</tr>
+							<tr>
+								<td class="Q8">Q2</td>
+							</tr>
+							<tr>
+								<td class="Q7">Q1</td>
+							</tr>
+						</tbody>
+					</table>
+				
+				</div>
+			</div>
+			<table class="table progress-tab jane">			
+				<tbody>
+					<tr>
+						<td class="Q6">Q3</td>
+					</tr>
+					<tr>
+						<td class="Q5">Q2</td>
+					</tr>
+					<tr>
+						<td class="Q4">Q1</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table progress-tab chrisie">				
+				<tbody>
+					<tr>
+						<td class="Q3">Q3</td>
+					</tr>
+					<tr>
+						<td class="Q2">Q2</td>
+					</tr>
+					<tr>
+						<td class="Q1">Q1</td>
+					</tr>
                 </tbody>
             </table>
+			
         </div>
 
 
@@ -135,12 +193,14 @@
 
         <div class="col-sm-7 text-left">
             <h2 align="center"> Question <span id="questionNumber">1</span>: What education has Jane already gained?</h2>
-            <p>This is where the conversation will appear</p>
-            <div class="btn-group btn-group-lg">
-                <h1>Answer Options</h1>
+            <p><img src="images/chat.png" alt="girl"></p>
+			
+            <div class="buttons">
+			
                 <button type="button" class="btn btn-primary" id="ansOpt1">Apple</button>
                 <button type="button" class="btn btn-primary" id="ansOpt2">Samsung</button>
                 <button type="button" class="btn btn-primary" id="ansOpt3">Sony</button>
+				
             </div>
         </div>
 
