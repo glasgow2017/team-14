@@ -22,17 +22,17 @@ $("#ans").on('keyup', function (e) {
     var input = $('#ans').val();
     console.log(input); // store THIS to the DB
 
-    $('<div class="col-md-8 text-right"><h3>' + Persona.smallQuestion + '</h3></div>').insertAfter('#textInput');
+    $('<div class="col-md-8 text-right"><h3 id="followup">' + Persona.smallQuestion + '</h3></div>').insertAfter('#textInput');
 
     // show hidden questions
     // TODO show 3 questions
     $('#smallOptionGroup1').removeClass('hidden');
-    showButtons();
+    showButtons(Persona.opt11, Persona.opt12, Persona.opt13);
   }
 });
 
-function showButtons() {
-  var buttons = '<div class="col-md-8 col-md-push-1" id="smallOptionGroup1"><div class="btn-group-vertical"><button type="button" class="btn btn-primary" id="smallOpt1" onclick="b1()">' + Persona.opt1 + '</button><button type="button" class="btn btn-primary" id="smallOpt2" onclick="b2()">' + Persona.opt2 + '</button> <button type="button" class="btn btn-primary" id="smallOpt3" onclick="b3()">' + Persona.opt3 + '</button> </div> </div>';
+function showButtons(opt1, opt2, opt3) {
+  var buttons = '<div class="col-md-8 col-md-push-1" id="smallOptionGroup1"><div class="btn-group-vertical"><button type="button" style="margin-left: 0;" class="btn btn-primary" id="smallOpt1" onclick="b1()">' + opt1 + '</button><button type="button" class="btn btn-primary" id="smallOpt2" onclick="b2()">' + opt2 + '</button> <button type="button" class="btn btn-primary" id="smallOpt3" onclick="b3()">' + opt3 + '</button> </div> </div>';
   $('#chat').append(buttons);
 }
 
