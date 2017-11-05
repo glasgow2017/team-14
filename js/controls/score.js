@@ -1,7 +1,7 @@
 // Global
 var questionNumber = 1;
 var score = 900;
-var Persona = Katie;
+var Persona = Jane;
 
 $('button').prop('disabled', true);
 

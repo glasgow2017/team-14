@@ -2,15 +2,19 @@ function updateQuestionNumber() {
   count=0;
   selected = [0, 0, 0];
 
+
   // get current question
   var questionElement = $('#questionNumber');
   var currentQuestion = parseInt(questionElement.text());
+
+  var selector = '.Q' + currentQuestion;
+  $(selector).parent().css("background-color", "green");
   // max question number is 9
   if ((currentQuestion + 1) > 3){
-    Persona = Jane;
+    Persona = Ava;
   }
   if ((currentQuestion + 1) > 6){
-    Persona = Ava;
+    Persona = Katie;
   }
   if (currentQuestion + 1 < 10) {
     questionElement.text((currentQuestion + 1));
