@@ -11,10 +11,12 @@ function updateQuestionNumber() {
 
   if ((currentQuestion + 1) > 3) {
     Persona = Ava;
+    $('#personaName').text('Ava');
     $('#mainImg').attr('src', 'images/Ava.png');
   }
   if ((currentQuestion + 1) > 6) {
     Persona = Katie;
+    $('#personaName').text('Katie');
     $('#mainImg').attr('src', 'images/Katie.png');
   }
   if (currentQuestion + 1 < 10) {

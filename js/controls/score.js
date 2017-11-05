@@ -23,7 +23,7 @@ $("#ans").on('keyup', function (e) {
     console.log(input); // store THIS to the DB
 
     $('#followup').remove();
-    $('<div class="col-md-8 text-right"><h3 id="followup">' + Persona.smallQuestion + '</h3></div>').insertAfter('#textInput');
+    $('<div class="col-md-8 text-right col-md-push-4"><p class="well" id="followup">' + Persona.smallQuestion + '</p></div>').insertAfter('#textInput');
 
     // show hidden questions
     // TODO show 3 questions
