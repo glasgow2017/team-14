@@ -1,0 +1,51 @@
+Jane: Hi, I’m Jane, I’m 19 and I live in South Florida. Where are you from?
+User: <text input>
+
+Question 1: What education has Jane already gained?
+
+Options: 	a.primary 	 b.secondary (high school)		c. college
+
+Jane: Nice! Is there anything you want to ask me?
+
+q1: How big is your family?
+	I live with my parents and I also have a lovely girl - Megan!
+
+q2: What do you do in your free time?
+	I like to go for walks with my little girl.
+
+q3: Do you like learning?
+	Yes! One day I want to become an accountant.
+
+Answer: 
+Jane has a child, so she had to drop out from the high school at the age of 16. In fact, only 50% of all teen mothers ever graduate high school.
+
+Question 2: How likely is it that Jane will get a college degree?
+
+Options: 	a.2%		b.45% 		c.92%
+
+q1: Who are your parents?
+	My mum is a shop assistant and my dad is a policeman.
+q2: What is your favourite subject in high school? 
+	I used to be great at maths! 
+q3: What is your dream job?
+	My dream is to become an accountant.
+
+Answer:
+Even though Jane is still dreaming about going to college, the reality is that only mere 2% of teen mothers earn a college degree by 30.
+
+Question 3: What is Jane’s relationship with the father of the child?
+
+Options:  a.We’re married	b.We broke up	c. I don’t know who the father is
+
+q1: Do you have a boyfriend at the moment?
+	No.
+q2: Do your parents help you with caring after the child?
+	I love my parents and I’m very grateful that they help me with everything they can.
+q3: What family do you dream about?
+	I want to have a caring husband and 2 kids.
+
+Answer: Like the majority of teen mothers in US, Jane is raising her daughter on her own.
+According to the US statistics, 80% of teen fathers don’t marry the mother of their child.
+
+Jane’s story:
+I got pregnant when I was 16. The father of the kid left me after hearing the news and I’ve never heard back from him. I had to drop out from the high school to take care of my child, but I am still dreaming about going to college some day and eventually becoming an accountant. However, statistics in US show that only 2 out of 100 teen mothers earn a college degree by the age of 30.
