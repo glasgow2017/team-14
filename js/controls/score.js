@@ -126,7 +126,14 @@ function b1() {
   count++;
   selected[0] = 1;
   $('#smallOptionGroup1').remove();
-  $('#chat').append('<div class="col-md-6 well que">' + Persona.opt11 + '</div>');
+  if (questionNumber % 3 === 1){
+    $('#chat').append('<div class="col-md-6 well que">' + Persona.opt11 + '</div>');
+  }else if (questionNumber % 3 === 2){
+    $('#chat').append('<div class="col-md-6 well que">' + Persona.opt21 + '</div>');
+  }else{
+    $('#chat').append('<div class="col-md-6 well que">' + Persona.opt31 + '</div>');
+  }
+
   $('#chat').append('<div class="col-md-8 well col-md-push-4 ans text-right">' + Persona.opt11ans + '</div>');
   if (count < 2) {
     showMessageOptions();
@@ -138,7 +145,13 @@ function b2() {
   count++;
   selected[1] = 1;
   $('#smallOptionGroup1').remove();
-  $('#chat').append('<div class="col-md-8 well que">' + Persona.opt12 + '</div>');
+  if (questionNumber % 3 === 1){
+    $('#chat').append('<div class="col-md-6 well que">' + Persona.opt21 + '</div>');
+  }else if (questionNumber % 3 === 2){
+    $('#chat').append('<div class="col-md-6 well que">' + Persona.opt22 + '</div>');
+  }else{
+    $('#chat').append('<div class="col-md-6 well que">' + Persona.opt23 + '</div>');
+  }
   $('#chat').append('<div class="col-md-8 well col-md-push-4 ans text-right">' + Persona.opt12ans + '</div>');
   if (count < 2) {
     showMessageOptions();
@@ -150,7 +163,13 @@ function b3() {
   count++;
   selected[2] = 1;
   $('#smallOptionGroup1').remove();
-  $('#chat').append('<div class="col-md-8 well que">' + Persona.opt13 + '</div>');
+  if (questionNumber % 3 === 1){
+    $('#chat').append('<div class="col-md-6 well que">' + Persona.opt31 + '</div>');
+  }else if (questionNumber % 3 === 2){
+    $('#chat').append('<div class="col-md-6 well que">' + Persona.opt32 + '</div>');
+  }else{
+    $('#chat').append('<div class="col-md-6 well que">' + Persona.opt33 + '</div>');
+  }
   $('#chat').append('<div class="col-md-8 well col-md-push-4 ans text-right">' + Persona.opt13ans + '</div>');
   if (count < 2) {
     showMessageOptions();
@@ -172,9 +191,9 @@ function disableButtons() {
 
 
 function setAnswerButtons1() {
+  console.log('b: ' + questionNumber);
   switch (questionNumber % 3) {
     case 0:
-
       $('#ansOpt1').text(Persona.ans3A);
       $('#ansOpt2').text(Persona.ans3B);
       $('#ansOpt3').text(Persona.ans3C);
@@ -193,6 +212,7 @@ function setAnswerButtons1() {
 }
 
 function showMessageOptions() {
+  console.log(questionNumber);
   switch (questionNumber % 3) {
     case 0:
       showButtons(Persona.opt31, Persona.opt32, Persona.opt33);
