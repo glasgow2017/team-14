@@ -28,7 +28,7 @@ $("#ans").on('keyup', function (e) {
     // show hidden questions
     // TODO show 3 questions
     // $('#smallOptionGroup1').removeClass('hidden');
-    q(Persona.opt11, Persona.opt12, Persona.opt13);
+    showMessageOptions(Persona.opt11, Persona.opt12, Persona.opt13);
   }
 });
 
@@ -42,11 +42,11 @@ $('#ansOpt1').click(function () {
   if (getCorrectAnswer() === 1) {
     score += 100;
     var selector = '.Q' + questionNumber;
-    $(selector).parent().css("background-color", "green");
+    $(selector).parent().css("background-color", "#79d279");
   } else {
     score -= 100;
     var selector = '.Q' + questionNumber;
-    $(selector).parent().css("background-color", "red");
+    $(selector).parent().css("background-color", "#ff4d4d");
 
   }
   updateQuestionNumber();
@@ -57,11 +57,11 @@ $('#ansOpt2').click(function () {
   if (getCorrectAnswer() === 2) {
     score += 100;
     var selector = '.Q' + questionNumber;
-    $(selector).parent().css("background-color", "green");
+    $(selector).parent().css("background-color", "#79d279");
   } else {
     score -= 100;
     var selector = '.Q' + questionNumber;
-    $(selector).parent().css("background-color", "red");
+    $(selector).parent().css("background-color", "#ff4d4d");
 
   }
   updateQuestionNumber();
@@ -71,11 +71,11 @@ $('#ansOpt3').click(function () {
   if (getCorrectAnswer() === 3) {
     score += 100;
     var selector = '.Q' + questionNumber;
-    $(selector).parent().css("background-color", "green");
+    $(selector).parent().css("background-color", "#79d279");
   } else {
     score -= 100;
     var selector = '.Q' + questionNumber;
-    $(selector).parent().css("background-color", "red");
+    $(selector).parent().css("background-color", "#ff4d4d");
 
   }
   updateQuestionNumber();
@@ -129,7 +129,7 @@ function b1() {
   $('#chat').append('<div class="col-md-6 well que">' + Persona.opt11 + '</div>');
   $('#chat').append('<div class="col-md-8 well col-md-push-4 ans">' + Persona.opt11ans + '</div>');
   if (count < 2) {
-    q();
+    showMessageOptions();
   }
   disableButtons();
 }
@@ -141,7 +141,7 @@ function b2() {
   $('#chat').append('<div class="col-md-8 well que">' + Persona.opt12 + '</div>');
   $('#chat').append('<div class="col-md-8 well col-md-push-4 ans">' + Persona.opt12ans + '</div>');
   if (count < 2) {
-    q();
+    showMessageOptions();
   }
   disableButtons();
 }
@@ -153,7 +153,7 @@ function b3() {
   $('#chat').append('<div class="col-md-8 well que">' + Persona.opt13 + '</div>');
   $('#chat').append('<div class="col-md-8 well col-md-push-4 ans">' + Persona.opt13ans + '</div>');
   if (count < 2) {
-    q();
+    showMessageOptions();
   }
   disableButtons();
 }
@@ -192,7 +192,7 @@ function setAnswerButtons1() {
   }
 }
 
-function q() {
+function showMessageOptions() {
   switch (questionNumber % 3) {
     case 0:
       showButtons(Persona.opt31, Persona.opt32, Persona.opt33);

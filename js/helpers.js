@@ -41,22 +41,22 @@ function updateMainQuestion() {
       $('#mainQuestionText').text(Jane.mainQuestion3);
       return;
     case 4:
-      $('#mainQuestionText').text(Jane.mainQuestion3);
+      $('#mainQuestionText').text(Ava.mainQuestion1);
       return;
     case 5:
-      $('#mainQuestionText').text(Jane.mainQuestion3);
+      $('#mainQuestionText').text(Ava.mainQuestion2);
       return;
     case 6:
-      $('#mainQuestionText').text(Jane.mainQuestion3);
+      $('#mainQuestionText').text(Ava.mainQuestion3);
       return;
     case 7:
-      $('#mainQuestionText').text(Jane.mainQuestion3);
+      $('#mainQuestionText').text(Katie.mainQuestion1);
       return;
     case 8:
-      $('#mainQuestionText').text(Jane.mainQuestion3);
+      $('#mainQuestionText').text(Katie.mainQuestion2);
       return;
     case 9:
-      $('#mainQuestionText').text(Jane.mainQuestion3);
+      $('#mainQuestionText').text(Katie.mainQuestion3);
       return;
   }
 }
@@ -66,28 +66,30 @@ function updateMainQuestion() {
 function getCorrectAnswer() {
   switch (questionNumber) {
     case 1:
-      return 3;
+      return 1;
     case 2:
-      return 2;
+      return 1;
     case 3:
       return 2;
     case 4:
-      return 1;
+      return 3;
     case 5:
       return 1;
     case 6:
-      return 2;
+      return 3;
     case 7:
       return 3;
     case 8:
       return 1;
     case 9:
-      return 3;
+      return 2;
   }
 }
 
 function endGame() {
   alert('GameOver! Your total score is ' + score);
+  window.location = "data.html";
+
 }
 
 function updateMessageBoard() {
@@ -109,7 +111,7 @@ function updateMessageBoard() {
     $('button').prop('disabled', true);
   } else {
     $('.col-md-8.text-right>h3').text('Is there anything you want to ask me?');
-    q();
+    showMessageOptions();
   }
 
 
