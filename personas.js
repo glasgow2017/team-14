@@ -45,7 +45,9 @@ Katie = {
   
   opt31ans:"I like playing guitar, it makes me calm.",
   opt32ans:"Yes. I’m trying to quit, but I’m struggling with that.",
-  opt33ans:"I like coffee and a bit of alcohol.. they help during hard times."  
+  opt33ans:"I like coffee and a bit of alcohol.. they help during hard times.",
+  
+  story: "I have been sexually assaulted by my ex-boyfriend. Unfortunately, it is common that the perpetrator is an intimate partner, while in the UK 90% of those who are raped know the perpetrator prior to the offence. I wouldn't wish anyone to experience what I have went through and I wish more people, then current 15% would seek for help and not drown their mysery in drugs."
 };
 
 Jane = {
@@ -122,7 +124,7 @@ Ava = {
   ans3A:"<10,000",
   ans3B:"10,000 - 50,000",
   ans3C:">50,000",
-  correct3:"58,000 woman dies within 45 days after giving birth in Nigeria. That is 1 every 22 mothers! Globally, the number is 1 every 180. The most common cause is Haemorrhage, which is preventable if births are attended by doctors.",
+  correct3:"58,000 women die within 45 days after giving birth in Nigeria. That is 1 every 22 mothers! Globally, the number is 1 every 180. The most common cause is Haemorrhage, which is preventable if births are attended by doctors.",
   
   smallQuestion1: "Nice to meet you. What do you want to know about me?",
   
@@ -147,5 +149,7 @@ Ava = {
   
   opt31ans:"I got paid 84 days maternity leave.",
   opt32ans:"Yes! I have 4 brothers and 3 sisters, however I’ve lost 2 of my sisters due to the unsuccessful childbirth procedure.",
-  opt33ans:"I’m not sure. Conditions for giving birth really scare me, I’ve heard many sad stories about women dying during the childbirth, as there was no hospital around."
-};
+  opt33ans:"I’m not sure. Conditions for giving birth really scare me, I’ve heard many sad stories about women dying during the childbirth, as there was no hospital around.",
+
+  story: "Being woman in Nigeria is not an easy task. Every time we give birth to a child, we risking our lives. 58 000 women die within 45 days after giving birth, due to poor medical infrastructure. What is more, even if you get higher education, and I was lucky enough to graduate from the university - you are most likely to be in a mere minority when at work. However, statistics show that women are not really welcome in parlament in many countries around the world. For example in UK women have only 32% of the parlament seats."
+  };
