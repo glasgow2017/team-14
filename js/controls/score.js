@@ -22,12 +22,13 @@ $("#ans").on('keyup', function (e) {
     var input = $('#ans').val();
     console.log(input); // store THIS to the DB
 
+    $('#followup').remove();
     $('<div class="col-md-8 text-right"><h3 id="followup">' + Persona.smallQuestion + '</h3></div>').insertAfter('#textInput');
 
     // show hidden questions
     // TODO show 3 questions
-    $('#smallOptionGroup1').removeClass('hidden');
-    showButtons(Persona.opt11, Persona.opt12, Persona.opt13);
+    // $('#smallOptionGroup1').removeClass('hidden');
+    q(Persona.opt11, Persona.opt12, Persona.opt13);
   }
 });
 
@@ -184,7 +185,6 @@ function setAnswerButtons1() {
       $('#ansOpt3').text(Persona.ans1C);
       return;
     case 2:
-      console.log('skdjkfl');
       $('#ansOpt1').text(Persona.ans2A);
       $('#ansOpt2').text(Persona.ans2B);
       $('#ansOpt3').text(Persona.ans2C);

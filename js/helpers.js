@@ -11,9 +11,11 @@ function updateQuestionNumber() {
 
   if ((currentQuestion + 1) > 3) {
     Persona = Ava;
+    $('#mainImg').attr('src', 'images/Ava.png');
   }
   if ((currentQuestion + 1) > 6) {
     Persona = Katie;
+    $('#mainImg').attr('src', 'images/Katie.png');
   }
   if (currentQuestion + 1 < 10) {
     questionElement.text((currentQuestion + 1));
@@ -88,11 +90,22 @@ function endGame() {
 function updateMessageBoard() {
   $('#intro').text('');
   $('#ans').prop('disabled', false).addClass('hidden');
-  $('.col-md-8.text-right>h3').text('Is there anything you want to ask me?');
   $('#smallOptionGroup1').remove();
   $('.que').remove();
   $('.ans').remove();
-  q();
+
+  if (questionNumber === 4 || questionNumber === 7) {
+    $('#intro').text(Persona.info);
+    $('#ans').removeClass('hidden');
+    $('#ans').val('');
+
+    $('.col-md-8.text-right>h3').text('');
+    $('button').prop('disabled', true);
+  } else {
+    $('.col-md-8.text-right>h3').text('Is there anything you want to ask me?');
+    q();
+  }
+
 
 }
 
