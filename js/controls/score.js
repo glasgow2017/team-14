@@ -1,106 +1,68 @@
 // Global
-// var score = $('span#score').text();
+var questionNumber = 1;
+var score = 900;
+var Persona = Jane;
+
+$('button').prop('disabled', true);
+
+// set initial question
+$('#mainQuestionText').text(Persona.mainQuestion1);
+$('#intro').text(Persona.info);
+setAnswerButtons1();
 
 
-$("#usr").on('keyup', function (e) {
-  if (e.keyCode === 13) {
-    var input = $('#usr').val();
-    console.log(input);
-  }
-});
-
+// user input
 $("#ans").on('keyup', function (e) {
   if (e.keyCode === 13) {
-    var input = $('#ans').val();
-    console.log(input);
+    $('button').prop('disabled', false);
+
+    // disable input
     $("#ans").prop('disabled', true);
-    // add new question or answer
-    $('<div class="col-md-8 text-right"><h3>' + input + '</h3></div>').insertAfter('#textInput');
+    // TODO store data into DB (or send it somewhere)
+    var input = $('#ans').val();
+    console.log(input); // store THIS to the DB
+
+    $('<div class="col-md-8 text-right"><h3>' + Persona.smallQuestion + '</h3></div>').insertAfter('#textInput');
 
     // show hidden questions
+    // TODO show 3 questions
     $('#smallOptionGroup1').removeClass('hidden');
+    showButtons();
   }
 });
 
+function showButtons() {
+  var buttons = '<div class="col-md-8 col-md-push-1" id="smallOptionGroup1"><div class="btn-group-vertical"><button type="button" class="btn btn-primary" id="smallOpt1" onclick="b1()">' + Persona.opt1 + '</button><button type="button" class="btn btn-primary" id="smallOpt2" onclick="b2()">' + Persona.opt2 + '</button> <button type="button" class="btn btn-primary" id="smallOpt3" onclick="b3()">' + Persona.opt3 + '</button> </div> </div>';
+  $('#chat').append(buttons);
+}
 
+// MAIN ANSWERS
 $('#ansOpt1').click(function () {
-  var questionNum = parseInt($('#questionNumber').text());
-  var ans = correctAnswer(questionNum);
-  if (ans === 1) {
-    console.log('Correct!');
-  } else {
-    console.log('Wrong!');
-  }
-
-  updateQuestion();
+  var ans = getCorrectAnswer() === 1;
+  console.log(ans);
+  updateQuestionNumber();
 });
 
 
 $('#ansOpt2').click(function () {
-  var questionNum = parseInt($('#questionNumber').text());
-  var ans = correctAnswer(questionNum);
-  if (ans === 2) {
-    console.log('Correct!');
-  } else {
-    console.log('Wrong!');
-  }
-  updateQuestion();
+  var ans = getCorrectAnswer() === 2;
+  console.log(ans);
+  updateQuestionNumber();
 });
 
 $('#ansOpt3').click(function () {
-  var questionNum = parseInt($('#questionNumber').text());
-  var ans = correctAnswer(questionNum);
-  if (ans === 3) {
-    console.log('Correct!');
-  } else {
-    console.log('Wrong!');
-  }
-  updateQuestion();
-
+  var ans = getCorrectAnswer() === 3;
+  console.log(ans);
+  updateQuestionNumber();
 });
 
 
-// get correct answer {1,2,3} based on question id {0-9}
-// btw, all hardcoded :)
-function correctAnswer(questionId) {
-  switch (questionId) {
-    case 1:
-      return 2;
-    case 2:
-      return 3;
-    case 3:
-      return 1;
-    case 4:
-      return 2;
-    case 5:
-      return 1;
-    case 6:
-      return 3;
-    case 7:
-      return 2;
-    case 8:
-      return 1;
-    case 9:
-      return 2;
-  }
-}
-
-
-function updateQuestion() {
-  // get current question
-  var questionElement = $('#questionNumber');
-  var currentQuestion = parseInt(questionElement.text());
-  questionElement.text(currentQuestion + 1);
-}
-
-
+// SMALL Questions
 var smallOpt11 = false;
 $('#smallOpt1').click(function () {
   if (!smallOpt11) {
-    $('#chat').append('<div class="col-md-8 text-right"><h3>An answer to small question</h3></div>');
-    $(this).prop('disabled', true);
-    $(this).removeClass('btn-primary');
-    $(this).addClass('btn-info');
+    $('#chat').append('<div class="col-md-8 text-right"><h3>' + Persona.opt1small + '</h3></div>');
+    $(this).removeClass('btn-primary').addClass('btn-info disabled');
     $("#smallOpt2").prop('disabled', true);
     $("#smallOpt3").prop('disabled', true);
   }
@@ -111,7 +73,7 @@ $('#smallOpt1').click(function () {
 var smallOpt12 = false;
 $('#smallOpt2').click(function () {
   if (!smallOpt12) {
-    $('#chat').append('<div class="col-md-8 text-right"><h3>An answer to small question</h3></div>');
+    $('#chat').append('<div class="col-md-8 text-right"><h3>' + Persona.opt1smal2 + '</h3></div>');
     $(this).prop('disabled', true);
     $(this).removeClass('btn-primary');
     $(this).addClass('btn-info');
@@ -133,3 +95,58 @@ $('#smallOpt3').click(function () {
   }
   smallOpt13 = true;
 });
+
+var count = 0;
+var selected = [0, 0, 0];
+
+function b1() {
+  count++;
+  selected[0] = 1;
+  $('#smallOptionGroup1').remove();
+  $('#chat').append('<div class="col-md-8">' + Persona.opt1 + '</div>');
+  $('#chat').append('<div class="col-md-8 col-md-push-4">' + Persona.opt1ans + '</div>');
+  if (count < 2) {
+    showButtons();
+  }
+  disableButtons();
+}
+
+function b2() {
+  count++;
+  selected[1] = 1;
+  $('#smallOptionGroup1').remove();
+  $('#chat').append('<div class="col-md-8">' + Persona.opt2 + '</div>');
+  $('#chat').append('<div class="col-md-8 col-md-push-4">' + Persona.opt2ans + '</div>');
+  if (count < 2) {
+    showButtons();
+  }
+  disableButtons();
+}
+
+function b3() {
+  count++;
+  selected[2] = 1;
+  $('#smallOptionGroup1').remove();
+  $('#chat').append('<div class="col-md-8">' + Persona.opt3 + '</div>');
+  $('#chat').append('<div class="col-md-8 col-md-push-4">' + Persona.opt3ans + '</div>');
+  if (count < 2) {
+    showButtons();
+  }
+  disableButtons();
+}
+
+function disableButtons() {
+  for (var i = 0; i < selected.length; i++) {
+    if (selected[i]) {
+      var id = '#smallOpt' + (i + 1);
+      $(id).prop('disabled', true);
+    }
+  }
+}
+
+
+function setAnswerButtons1() {
+  $('#ansOpt1').text(Persona.ans1A);
+  $('#ansOpt2').text(Persona.ans1B);
+  $('#ansOpt3').text(Persona.ans1C);
+}
