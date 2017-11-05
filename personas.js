@@ -7,12 +7,14 @@ Katie = {
   ans1A: "<10%",
   ans1B: "10-20%",
   ans1C: ">20%",
-  correct1:"Approximately 85,000 women are raped in England and Wales alone every year; that's roughly 10 rapes (of adults alone) every hour. Unfortunately this happened to Katie to - she was sexually assaulted by her ex-boyfriend.",
+  correct1:"Approximately 85,000 women are raped in England and Wales alone every year; that's roughly 10 rapes (of adults alone) every hour. Unfortunately this happened to Katie too - she was sexually assaulted by her ex-boyfriend.",
+  fact1:"Katie has been sexually assaulted by her ex-boyfriend",
   
   ans2A:"Reported her boyfriend to police, he got prosecuted.",
   ans2B:"Didn’t report, because she thought nothing could be done.",
   ans2C:"Didn’t report, because she was too afraid of to be judged.",
   correct2:"Only around 15% of victims report to the police. The reasons vary, including disbelief that something could be done, considering it a private matter and being scared of the police response.",
+  fact2: "Katie felt too embarrassed about her experience to seek any help",
   
   ans3A:"Twice more likely",
   ans3B:"6 times more likely",
@@ -29,8 +31,8 @@ Katie = {
   opt13ans: "Not anymore. I broke up with my last boyfriend recently.",
   
   opt21: "Oh, I am so sorry about that! Are you feeling okay now?",
-  opt22: "Oh, I am so sorry about that! Did you see any doctors after that?",
-  opt23:"Oh, I am so sorry about that! Have you spoken to him since?",
+  opt22: "What a terrible experience you had to go through! Did you see any doctors after that?",
+  opt23: "I'm so sorry to hear that! Have you spoken to him since?",
   
   opt21ans: "I often feel very anxious, I tried to kill myself twice. But I am getting better now. ",
   opt22ans:"No, I didn’t know who I can talk to. I didn’t even tell it my parents.",
@@ -55,12 +57,14 @@ Jane = {
   ans1B: "secondary (high school)",
   ans1C: "college",
   correct1: "Jane has a child, so she had to drop out from the high school at the age of 16. In fact, only 50% of all teen mothers ever graduate high school.",
-
+  fact1: "She became a teen mother at the age of 16",
+  
   ans2A: "2%",
   ans2B: "45%",
   ans2C: "92%",
   correct2: "Even though Jane is still dreaming about going to college, the reality is that only mere 2% of teen mothers earn a college degree by 30.",
-
+  fact2: "At the moment, she only has completed primary education"
+  
   ans3A: "We’re married",
   ans3B: "We broke up",
   ans3C: "I don’t know who the father is",
@@ -96,7 +100,7 @@ Jane = {
 };
 
 Ava = {
-  info: "Hi, my name is Ava, I’m 42. I am from Nigeria and I have two kids. How old are you?",
+  info: "Hi, my name is Ava, I’m 42. I am from Nigeria and I have two daughters. How old are you?",
   
   mainQuestion1: "How likely is it that Ava’s children will start working before they are 17?",
   mainQuestion2: "Ava works in Nigerian parlament. How many women are there in Ava’s office?",
@@ -104,12 +108,14 @@ Ava = {
   ans1A: "<10%",
   ans1B: "10-20%",
   ans1C: ">20%",
-  correct1:"",
+  correct1:"The percentage of under 17 years olds already working is at 9.6% globally. In Nigeria this number hits 25%. Ava's daughter is one of those kids - she started working when she turned 15.",
+  fact1: "One of Ava's daughters is 15 years old and already works to support family",
   
   ans2A:"<25",
   ans2B:"25-50",
   ans2C:">50",
-  correct2:"In 2017 women represent less than 1/4 of parliament body. In Nigera, only 5.6% parliament seats are held by women. It is not always easy for women to work in Nigeria, it is even harder for mothers, especially when they give birth.",
+  correct2:"In 2017 women represent less than 1/4 of parliament body. In Nigeria, only 5.6% parliament seats are held by women. It is not always easy for women to work in Nigeria, it is even harder for mothers, especially when they give birth.",
+  fact2:"Ava is one of 5 women in Niagerian parlament",
   
   ans3A:"<10,000",
   ans3B:"10,000 - 50,000",
@@ -119,11 +125,11 @@ Ava = {
   smallQuestion1: "Nice to meet you. What do you want to know about me?",
   
   opt11: "How old are your children?",
-  opt11ans: "One of them is 5 and another one is 12."
+  opt11ans: "One of them is 7 and another one is 15."
   opt12: "When did you first start working?",
   opt12ans: "Too early! I went to work when I was 16.",
   opt13: "What does your husband's occupation?",
-  opt13ans: "He works as a high school teacher",
+  opt13ans: "He works as a school teacher",
   
   opt21: "How long have you been working in the parliament?",
   opt22: "Do you like working there?",
