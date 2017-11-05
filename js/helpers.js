@@ -54,27 +54,26 @@ function updateMainQuestion() {
 
 // get correct answer {1,2,3} based on question id {0-9}
 // btw, all hardcoded :)
-// TODO replace dummy data
 function getCorrectAnswer() {
   switch (questionNumber) {
     case 1:
-      return 2;
-    case 2:
       return 3;
-    case 3:
-      return 1;
-    case 4:
+    case 2:
       return 2;
+    case 3:
+      return 2;
+    case 4:
+      return 1;
     case 5:
       return 1;
     case 6:
-      return 3;
-    case 7:
       return 2;
+    case 7:
+      return 3;
     case 8:
       return 1;
     case 9:
-      return 2;
+      return 3;
   }
 }
 
