@@ -23,9 +23,11 @@ function updateQuestionNumber() {
     updateMainQuestion();
     updateMessageBoard();
     setAnswerButtons1();
+    showFacts();
   } else {
     endGame();
   }
+
 }
 
 function updateMainQuestion() {
@@ -59,7 +61,6 @@ function updateMainQuestion() {
 
 
 // get correct answer {1,2,3} based on question id {0-9}
-// btw, all hardcoded :)
 function getCorrectAnswer() {
   switch (questionNumber) {
     case 1:
@@ -111,4 +112,31 @@ function updateMessageBoard() {
 
 function updateScore() {
   $('#score').text(score);
+}
+
+function showFacts() {
+  switch (questionNumber) {
+    case 2:
+      $('#fact1').text(Persona.fact1);
+      return;
+    case 3:
+      $('#fact2').text(Persona.fact2);
+      return;
+    case 5:
+      $('#fact1').text(Persona.fact1);
+      return;
+    case 6:
+      $('#fact2').text(Persona.fact2);
+      return;
+    case 8:
+      $('#fact1').text(Persona.fact1);
+      return;
+    case 9:
+      $('#fact2').text(Persona.fact2);
+      return;
+    default:
+      $('#fact1').text('');
+      $('#fact2').text('');
+      return;
+  }
 }
