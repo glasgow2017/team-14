@@ -147,9 +147,25 @@ function disableButtons() {
 
 
 function setAnswerButtons1() {
-  $('#ansOpt1').text(Persona.ans1A);
-  $('#ansOpt2').text(Persona.ans1B);
-  $('#ansOpt3').text(Persona.ans1C);
+  switch (questionNumber % 3) {
+    case 0:
+
+      $('#ansOpt1').text(Persona.ans3A);
+      $('#ansOpt2').text(Persona.ans3B);
+      $('#ansOpt3').text(Persona.ans3C);
+      return;
+    case 1:
+      $('#ansOpt1').text(Persona.ans1A);
+      $('#ansOpt2').text(Persona.ans1B);
+      $('#ansOpt3').text(Persona.ans1C);
+      return;
+    case 2:
+      console.log('skdjkfl');
+      $('#ansOpt1').text(Persona.ans2A);
+      $('#ansOpt2').text(Persona.ans2B);
+      $('#ansOpt3').text(Persona.ans2C);
+      return;
+  }
 }
 
 function q() {

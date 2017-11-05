@@ -9,7 +9,7 @@ function updateQuestionNumber() {
 
   var selector = '.Q' + currentQuestion;
   $(selector).parent().css("background-color", "green");
-  // max question number is 9
+
   if ((currentQuestion + 1) > 3){
     Persona = Ava;
   }
@@ -21,6 +21,7 @@ function updateQuestionNumber() {
     questionNumber = currentQuestion + 1;
     updateMainQuestion();
     updateMessageBoard();
+    setAnswerButtons1();
   } else {
     endGame();
   }
@@ -82,7 +83,7 @@ function getCorrectAnswer() {
 }
 
 function endGame() {
-  alert('GameOver! Your total score is [some number here]');
+  alert('GameOver! Your total score is ' + score);
 }
 
 function updateMessageBoard() {
