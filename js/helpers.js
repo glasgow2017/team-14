@@ -16,6 +16,7 @@ function updateQuestionNumber() {
     questionElement.text((currentQuestion + 1));
     questionNumber = currentQuestion + 1;
     updateMainQuestion();
+    updateMessageBoard();
   } else {
     endGame();
   }
@@ -81,4 +82,13 @@ function endGame() {
   alert('GameOver! Your total score is [some number here]');
 }
 
+function updateMessageBoard() {
+  $('#intro').text('');
+  $('#ans').prop('disabled', false).addClass('hidden');
+  $('.col-md-8.text-right>h3').text('Is there anything you want to ask me?');
+  $('#smallOptionGroup1').remove();
+  $('.que').remove();
+  $('.ans').remove();
+  q();
 
+}
