@@ -1,8 +1,17 @@
 function updateQuestionNumber() {
+  count=0;
+  selected = [0, 0, 0];
+
   // get current question
   var questionElement = $('#questionNumber');
   var currentQuestion = parseInt(questionElement.text());
   // max question number is 9
+  if ((currentQuestion + 1) > 3){
+    Persona = Jane;
+  }
+  if ((currentQuestion + 1) > 6){
+    Persona = Ava;
+  }
   if (currentQuestion + 1 < 10) {
     questionElement.text((currentQuestion + 1));
     questionNumber = currentQuestion + 1;
