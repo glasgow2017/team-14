@@ -1,0 +1,16 @@
+Ava = {
+  info: "Hi, my name is Ava, I’m 42. I am from Nigeria and I have two kids. How old are you?",
+  mainQuestion1: "How likely is it that Ava’s children will start working before they are 17?",
+  mainQuestion2: "How many women are there in Ava’s office?",
+  mainQuestion3: "How many women die from giving a birth in Nigeria every year?",
+  ans1: "<10%",
+  ans1: "10-20%",
+  ans1: ">20%",
+  smallQuestion1: "Nice to meet you. What do you want to know about me?",
+  opt1: "How old are your children?",
+  opt1ans: "One of them is 5 and another one is 12."
+  opt2: "When did you first start working?",
+  opt2ans: "Too early! I went to work when I was 16.",
+  opt3: "What does your husband's occupation?",
+  opt3ans: "He works as a high school teacher"  
+};
