@@ -92,6 +92,8 @@ function endGame() {
 
 function updateMessageBoard() {
   $('#intro').text('');
+  $('#intro').removeClass('well');
+
   $('#ans').prop('disabled', false).addClass('hidden');
   $('#smallOptionGroup1').remove();
   $('.que').remove();
@@ -99,6 +101,7 @@ function updateMessageBoard() {
 
   if (questionNumber === 4 || questionNumber === 7) {
     $('#intro').text(Persona.info);
+    $('#intro').addClass('well');
     $('#ans').removeClass('hidden');
     $('#ans').val('');
 
