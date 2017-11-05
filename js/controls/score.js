@@ -2,16 +2,20 @@
 var questionNumber = 1;
 var score = 900;
 var Persona = Jane;
-var smallQuestionNumber = 1;
+
+$('button').prop('disabled', true);
 
 // set initial question
 $('#mainQuestionText').text(Persona.mainQuestion1);
 $('#intro').text(Persona.info);
+setAnswerButtons1();
 
 
 // user input
 $("#ans").on('keyup', function (e) {
   if (e.keyCode === 13) {
+    $('button').prop('disabled', false);
+
     // disable input
     $("#ans").prop('disabled', true);
     // TODO store data into DB (or send it somewhere)
@@ -23,9 +27,14 @@ $("#ans").on('keyup', function (e) {
     // show hidden questions
     // TODO show 3 questions
     $('#smallOptionGroup1').removeClass('hidden');
+    showButtons();
   }
 });
 
+function showButtons() {
+  var buttons = '<div class="col-md-8 col-md-push-1" id="smallOptionGroup1"><div class="btn-group-vertical"><button type="button" class="btn btn-primary" id="smallOpt1" onclick="b1()">' + Persona.opt1 + '</button><button type="button" class="btn btn-primary" id="smallOpt2" onclick="b2()">' + Persona.opt2 + '</button> <button type="button" class="btn btn-primary" id="smallOpt3" onclick="b3()">' + Persona.opt3 + '</button> </div> </div>';
+  $('#chat').append(buttons);
+}
 
 // MAIN ANSWERS
 $('#ansOpt1').click(function () {
@@ -86,3 +95,58 @@ $('#smallOpt3').click(function () {
   }
   smallOpt13 = true;
 });
+
+var count = 0;
+var selected = [0, 0, 0];
+
+function b1() {
+  count++;
+  selected[0] = 1;
+  $('#smallOptionGroup1').remove();
+  $('#chat').append('<div class="col-md-8">' + Persona.opt1 + '</div>');
+  $('#chat').append('<div class="col-md-8 col-md-push-4">' + Persona.opt1ans + '</div>');
+  if (count < 2) {
+    showButtons();
+  }
+  disableButtons();
+}
+
+function b2() {
+  count++;
+  selected[1] = 1;
+  $('#smallOptionGroup1').remove();
+  $('#chat').append('<div class="col-md-8">' + Persona.opt2 + '</div>');
+  $('#chat').append('<div class="col-md-8 col-md-push-4">' + Persona.opt2ans + '</div>');
+  if (count < 2) {
+    showButtons();
+  }
+  disableButtons();
+}
+
+function b3() {
+  count++;
+  selected[2] = 1;
+  $('#smallOptionGroup1').remove();
+  $('#chat').append('<div class="col-md-8">' + Persona.opt3 + '</div>');
+  $('#chat').append('<div class="col-md-8 col-md-push-4">' + Persona.opt3ans + '</div>');
+  if (count < 2) {
+    showButtons();
+  }
+  disableButtons();
+}
+
+function disableButtons() {
+  for (var i = 0; i < selected.length; i++) {
+    if (selected[i]) {
+      var id = '#smallOpt' + (i + 1);
+      $(id).prop('disabled', true);
+    }
+  }
+}
+
+
+function setAnswerButtons1() {
+  $('#ansOpt1').text(Persona.ans1A);
+  $('#ansOpt2').text(Persona.ans1B);
+  $('#ansOpt3').text(Persona.ans1C);
+}
