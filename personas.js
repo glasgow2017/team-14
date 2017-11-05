@@ -24,7 +24,7 @@ Katie = {
   smallQuestion1: "Nice to meet you. What do you want to know about me?",
   
   opt11: "Are you currently studying at the university?",
-  opt11ans: "Yes, I’m studying Medicine. I want to be a doctor."
+  opt11ans: "Yes, I’m studying Medicine. I want to be a doctor.",
   opt12: "Do you live with your parents?",
   opt12ans: "Yes, but my parents are really busy, they come home really late everyday.",
   opt13: "Do you have a boyfriend?",
@@ -63,7 +63,7 @@ Jane = {
   ans2B: "45%",
   ans2C: "92%",
   correct2: "Even though Jane is still dreaming about going to college, the reality is that only mere 2% of teen mothers earn a college degree by 30.",
-  fact2: "At the moment, she only has completed primary education"
+  fact2: "At the moment, she only has completed primary education",
   
   ans3A: "We’re married",
   ans3B: "We broke up",
@@ -78,7 +78,7 @@ Jane = {
 
   opt11ans: "I live with my parents and I also have a lovely girl - Megan!",
   opt12ans: "I like to go for walks with my little girl.",
-  opt13ans: "Yes! One day I want to become an accountant."
+  opt13ans: "Yes! One day I want to become an accountant.",
   
   opt21:"Who are your parents?",
   opt22:"What is your favourite subject in high school? ",
@@ -125,7 +125,7 @@ Ava = {
   smallQuestion1: "Nice to meet you. What do you want to know about me?",
   
   opt11: "How old are your children?",
-  opt11ans: "One of them is 7 and another one is 15."
+  opt11ans: "One of them is 7 and another one is 15.",
   opt12: "When did you first start working?",
   opt12ans: "Too early! I went to work when I was 16.",
   opt13: "What does your husband's occupation?",
