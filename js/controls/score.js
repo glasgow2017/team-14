@@ -101,10 +101,10 @@ function b1() {
   count++;
   selected[0] = 1;
   $('#smallOptionGroup1').remove();
-  $('#chat').append('<div class="col-md-8">' + Persona.opt1 + '</div>');
-  $('#chat').append('<div class="col-md-8 col-md-push-4">' + Persona.opt1ans + '</div>');
+  $('#chat').append('<div class="col-md-8 que">' + Persona.opt11 + '</div>');
+  $('#chat').append('<div class="col-md-8 col-md-push-4 ans">' + Persona.opt11ans + '</div>');
   if (count < 2) {
-    showButtons();
+    q();
   }
   disableButtons();
 }
@@ -113,10 +113,10 @@ function b2() {
   count++;
   selected[1] = 1;
   $('#smallOptionGroup1').remove();
-  $('#chat').append('<div class="col-md-8">' + Persona.opt2 + '</div>');
-  $('#chat').append('<div class="col-md-8 col-md-push-4">' + Persona.opt2ans + '</div>');
+  $('#chat').append('<div class="col-md-8 que">' + Persona.opt12 + '</div>');
+  $('#chat').append('<div class="col-md-8 col-md-push-4 ans">' + Persona.opt12ans + '</div>');
   if (count < 2) {
-    showButtons();
+    q();
   }
   disableButtons();
 }
@@ -125,10 +125,10 @@ function b3() {
   count++;
   selected[2] = 1;
   $('#smallOptionGroup1').remove();
-  $('#chat').append('<div class="col-md-8">' + Persona.opt3 + '</div>');
-  $('#chat').append('<div class="col-md-8 col-md-push-4">' + Persona.opt3ans + '</div>');
+  $('#chat').append('<div class="col-md-8 que">' + Persona.opt13 + '</div>');
+  $('#chat').append('<div class="col-md-8 col-md-push-4 ans">' + Persona.opt13ans + '</div>');
   if (count < 2) {
-    showButtons();
+    q();
   }
   disableButtons();
 }
@@ -150,4 +150,18 @@ function setAnswerButtons1() {
   $('#ansOpt1').text(Persona.ans1A);
   $('#ansOpt2').text(Persona.ans1B);
   $('#ansOpt3').text(Persona.ans1C);
+}
+
+function q() {
+  switch (questionNumber % 3) {
+    case 0:
+      showButtons(Persona.opt31, Persona.opt32, Persona.opt33);
+      return;
+    case 1:
+      showButtons(Persona.opt11, Persona.opt12, Persona.opt13);
+      return;
+    case 2:
+      showButtons(Persona.opt21, Persona.opt22, Persona.opt23);
+      return;
+  }
 }
