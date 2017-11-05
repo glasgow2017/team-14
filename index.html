@@ -12,26 +12,6 @@
             margin-bottom: 0;
             border-radius: 0;
         }
-		
-
-        .progress-bar-vertical {
-            width: 50px;
-            min-height: 300px;
-            display: flex;
-            align-items: flex-end;
-            margin-left: 40px;
-            float: left;
-        }
-
-        .progress-bar-vertical .progress-bar {
-            width: 100%;
-            height: 0;
-            display: flex;
-            flex-direction: column-reverse;
-            -webkit-transition: height 0.6s ease;
-            -o-transition: height 0.6s ease;
-            transition: height 0.6s ease;
-        }
 
         /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
         .row.content {
@@ -47,48 +27,47 @@
             padding-top: 20px;
             height: 100%;
         }
-		
-		.ava {
-			background-color: #80cbc5;
-		}
-		
-		.jane {
-			background-color:  rgb(170,220,216);
-		}
-		
-				
-		.katie {
-			background-color:  #c9e9e6;
-		}
-		
-		.buttons{
-			width: 70%;
-			margin:0 auto;
-		}
-		
-		button{
-			width: 28%;
-			height: 60px;
-			margin: 10px;
-		}
-		
-		.names {
 
-			writing-mode: vertical-rl;
-			text-orientation: upright;
-		}
-		
-		.name-label {
-			display:block; 
-			text-align:right;
-			margin-top: 15%;
-			padding-right: 0px;
-		}
-		
-		.progress-tab {
+        .ava {
+            background-color: #80cbc5;
+        }
+
+        .jane {
+            background-color: rgb(170, 220, 216);
+        }
+
+        .katie {
+            background-color: #c9e9e6;
+        }
+
+        .buttons {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        button {
+            width: 28%;
+            height: 60px;
+            margin: 10px;
+        }
+
+        .names {
+
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+
+        .name-label {
+            display: block;
+            text-align: right;
+            margin-top: 15%;
+            padding-right: 0px;
+        }
+
+        .progress-tab {
             width: 70%;
             margin-top: 10%;
-			margin-bottom: 5px;
+            margin-bottom: 5px;
             border: solid #ccc 1px;
         }
 
@@ -116,91 +95,75 @@
 <div class="container-fluid text-center">
     <div class="row content">
         <div class="visible-lg visible-md col-md-2 sidenav">
-			<div class="well text-left" style="height:15%">
-				<p style="font-size:16px;"><b>Score:</b><span id="score"> 9000</span></p>
-			</div>
-			
-			<div class="row">
-			
-				<div class="col-md-3 name-label">
-				
-					<label class="names">Ava</label>
-				
-				</div>
-			
-				<div class="col-md-9 progress-table">
-			
-					<table class="table progress-tab ava">
-						<tbody>
-							<tr>
-								<td class="Q9">Q3</td>
-							</tr>
-							<tr>
-								<td class="Q8">Q2</td>
-							</tr>
-							<tr>
-								<td class="Q7">Q1</td>
-							</tr>
-						</tbody>
-					</table>
-				
-				</div>
-			</div>
+            <!-- Score -->
+            <div class="well text-left" style="height:15%">
+                <p style="font-size:16px;"><b>Score:</b><span id="score"> 9000</span></p>
+            </div>
 
-			<div class="row">
-			
-				<div class="col-md-3 name-label">
-				
-					<label class="names">Jane</label>
-				
-				</div>
-			
-				<div class="col-md-9 progress-table">
-			
-					<table class="table progress-tab jane">
-						<tbody>
-							<tr>
-								<td class="Q6">Q3</td>
-							</tr>
-							<tr>
-								<td class="Q5">Q2</td>
-							</tr>
-							<tr>
-								<td class="Q4">Q1</td>
-							</tr>
-						</tbody>
-					</table>
-				
-				</div>
-			</div>
-			
-			<div class="row">
-			
-				<div class="col-md-3 name-label">
-				
-					<label class="names">Katie</label>
-				
-				</div>
-			
-				<div class="col-md-9 progress-table">
-			
-					<table class="table progress-tab katie">
-						<tbody>
-							<tr>
-								<td class="Q3">Q3</td>
-							</tr>
-							<tr>
-								<td class="Q2">Q2</td>
-							</tr>
-							<tr>
-								<td class="Q1">Q1</td>
-							</tr>
-						</tbody>
-					</table>
-				
-				</div>
-			</div>
-			
+            <div class="row">
+
+                <div class="col-md-3 name-label">
+                    <label class="names">Ava</label>
+                </div>
+
+                <div class="col-md-9 progress-table">
+                    <table class="table progress-tab ava">
+                        <tbody>
+                        <tr>
+                            <td class="Q9">Q3</td>
+                        </tr>
+                        <tr>
+                            <td class="Q8">Q2</td>
+                        </tr>
+                        <tr>
+                            <td class="Q7">Q1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 name-label">
+                    <label class="names">Jane</label>
+                </div>
+                <div class="col-md-9 progress-table">
+                    <table class="table progress-tab jane">
+                        <tbody>
+                        <tr>
+                            <td class="Q6">Q3</td>
+                        </tr>
+                        <tr>
+                            <td class="Q5">Q2</td>
+                        </tr>
+                        <tr>
+                            <td class="Q4">Q1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 name-label">
+                    <label class="names">Katie</label>
+                </div>
+                <div class="col-md-9 progress-table">
+                    <table class="table progress-tab katie">
+                        <tbody>
+                        <tr>
+                            <td class="Q3">Q3</td>
+                        </tr>
+                        <tr>
+                            <td class="Q2">Q2</td>
+                        </tr>
+                        <tr>
+                            <td class="Q1">Q1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
 
 
@@ -224,13 +187,15 @@
 
 
         <div class="col-sm-7 text-left">
-            <h2 align="center"> Question <span id="questionNumber">1</span>: What education has Jane already gained?</h2>
-            <!--<p><img src="images/chat.png" alt="girl"></p>-->
+            <h2 align="center">
+                Question <span id="questionNumber">1</span>:
+                <span id="mainQuestionText">What education has Jane already gained?</span>
+            </h2>
 
-			
+
             <div class="row" id="chat">
                 <div class="col-md-9 text-right">
-                    <h3>Question?</h3>
+                    <h3 id="intro">Question?</h3>
                 </div>
                 <div class="col-md-8 col-md-push-1" id="textInput">
                     <label for="ans"><input type="text" class="form-control" id="ans"></label>
@@ -244,16 +209,14 @@
                     </div>
                 </div>
             </div>
-			
-			
-			
+
+
             <!--main answers -->
             <div class="buttons">
-			
                 <button type="button" class="btn btn-primary" id="ansOpt1">Apple</button>
                 <button type="button" class="btn btn-primary" id="ansOpt2">Samsung</button>
                 <button type="button" class="btn btn-primary" id="ansOpt3">Sony</button>
-				
+
             </div>
         </div>
 
@@ -274,7 +237,9 @@
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jane.js"></script>
 <script src="js/controls/score.js"></script>
+<script src="js/helpers.js"></script>
 
 </body>
 </html>
