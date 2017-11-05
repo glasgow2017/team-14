@@ -1,6 +1,6 @@
 // Global
 var questionNumber = 1;
-var score = 900;
+var score = parseInt($('#score').text());
 var Persona = Jane;
 
 $('button').prop('disabled', true);
@@ -38,21 +38,45 @@ function showButtons(opt1, opt2, opt3) {
 
 // MAIN ANSWERS
 $('#ansOpt1').click(function () {
-  var ans = getCorrectAnswer() === 1;
-  console.log(ans);
+  if (getCorrectAnswer() === 1) {
+    score += 100;
+    var selector = '.Q' + questionNumber;
+    $(selector).parent().css("background-color", "green");
+  } else {
+    score -= 100;
+    var selector = '.Q' + questionNumber;
+    $(selector).parent().css("background-color", "red");
+
+  }
   updateQuestionNumber();
 });
 
 
 $('#ansOpt2').click(function () {
-  var ans = getCorrectAnswer() === 2;
-  console.log(ans);
+  if (getCorrectAnswer() === 2) {
+    score += 100;
+    var selector = '.Q' + questionNumber;
+    $(selector).parent().css("background-color", "green");
+  } else {
+    score -= 100;
+    var selector = '.Q' + questionNumber;
+    $(selector).parent().css("background-color", "red");
+
+  }
   updateQuestionNumber();
 });
 
 $('#ansOpt3').click(function () {
-  var ans = getCorrectAnswer() === 3;
-  console.log(ans);
+  if (getCorrectAnswer() === 3) {
+    score += 100;
+    var selector = '.Q' + questionNumber;
+    $(selector).parent().css("background-color", "green");
+  } else {
+    score -= 100;
+    var selector = '.Q' + questionNumber;
+    $(selector).parent().css("background-color", "red");
+
+  }
   updateQuestionNumber();
 });
 

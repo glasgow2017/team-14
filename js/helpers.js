@@ -1,19 +1,18 @@
 function updateQuestionNumber() {
-  count=0;
+  count = 0;
   selected = [0, 0, 0];
+  updateScore();
 
 
   // get current question
   var questionElement = $('#questionNumber');
   var currentQuestion = parseInt(questionElement.text());
 
-  var selector = '.Q' + currentQuestion;
-  $(selector).parent().css("background-color", "green");
 
-  if ((currentQuestion + 1) > 3){
+  if ((currentQuestion + 1) > 3) {
     Persona = Ava;
   }
-  if ((currentQuestion + 1) > 6){
+  if ((currentQuestion + 1) > 6) {
     Persona = Katie;
   }
   if (currentQuestion + 1 < 10) {
@@ -95,4 +94,8 @@ function updateMessageBoard() {
   $('.ans').remove();
   q();
 
+}
+
+function updateScore() {
+  $('#score').text(score);
 }
