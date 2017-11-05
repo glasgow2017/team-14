@@ -1,4 +1,5 @@
 Katie = {
+  smallQuestion: "Nice! Is there anything you want to ask me?",
   info: "Hi, I’m Katie, I live in the UK. I’m a girl, what is your gender?",
   
   mainQuestion1: "What is the probability that Katie has ever been sexually assaulted?",
@@ -100,6 +101,7 @@ Jane = {
 };
 
 Ava = {
+  smallQuestion: "Nice! Is there anything you want to ask me?",
   info: "Hi, my name is Ava, I’m 42. I am from Nigeria and I have two daughters. How old are you?",
   
   mainQuestion1: "How likely is it that Ava’s children will start working before they are 17?",
