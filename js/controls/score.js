@@ -74,9 +74,8 @@ var smallOpt12 = false;
 $('#smallOpt2').click(function () {
   if (!smallOpt12) {
     $('#chat').append('<div class="col-md-8 text-right"><h3>' + Persona.opt1smal2 + '</h3></div>');
-    $(this).prop('disabled', true);
     $(this).removeClass('btn-primary');
-    $(this).addClass('btn-info');
+    $(this).addClass('btn-info disabled');
     $("#smallOpt1").prop('disabled', true);
     $("#smallOpt3").prop('disabled', true);
   }
@@ -87,9 +86,8 @@ var smallOpt13 = false;
 $('#smallOpt3').click(function () {
   if (!smallOpt13) {
     $('#chat').append('<div class="col-md-8 text-right"><h3>An answer to small question</h3></div>');
-    $(this).prop('disabled', true);
     $(this).removeClass('btn-primary');
-    $(this).addClass('btn-info');
+    $(this).addClass('btn-info disabled');
     $("#smallOpt1").prop('disabled', true);
     $("#smallOpt2").prop('disabled', true);
   }
@@ -140,6 +138,9 @@ function disableButtons() {
     if (selected[i]) {
       var id = '#smallOpt' + (i + 1);
       $(id).prop('disabled', true);
+    } else {
+      var id = '#smallOpt' + (i + 1);
+      $(id).prop('disabled', false);
     }
   }
 }
